@@ -20,7 +20,9 @@ class Kind:
             raise TypeError("kind_value must be an integer")
 
         if value not in self.values:
-            raise ValueError("kind_value must be a integer between 1 inclusive and 13 inclusive")
+            raise ValueError(
+                "kind_value must be a integer between 1 inclusive and 13 inclusive"
+            )
 
         self.value = 0
         self.type = self.values[value]

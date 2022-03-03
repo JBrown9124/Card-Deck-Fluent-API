@@ -17,6 +17,10 @@ if __name__ == "__main__":
     first_question_answer = (
         deck.shuffle("in").times(7).tracking_card(1).execute().first_tracked_pos
     )
+    print(
+        f"What is the position of the first card after the 7th shuffle?\
+        \nA: The position of the first card after the 7th shuffle is {first_question_answer}."
+    )
 
     # How many times must you perform the shuffle so that the top card becomes the bottom card?
     second_question_answer = (
@@ -25,6 +29,10 @@ if __name__ == "__main__":
         .tracking_card(1)
         .execute()
         .times_shuffled
+    )
+    print(
+        f"\nHow many times must you perform the shuffle so that the top card becomes the bottom card?\
+        \nA: You must perform the shuffle {second_question_answer} times for the top card to become the bottom card."
     )
 
     # When do the first and last cards in the deck touch?
@@ -36,15 +44,7 @@ if __name__ == "__main__":
         .times_shuffled
         + 1
     )
-
     print(
-        f"What is the position of the first card after the 7th shuffle?\nA: {first_question_answer}"
-    )
-
-    print(
-        f"\nHow many times must you perform the shuffle so that the top card becomes the bottom card?\nA: {second_question_answer}"
-    )
-
-    print(
-        f"\nWhen do the first and last cards in the deck touch?\nA: {third_question_answer}"
+        f"\nWhen do the first and last cards in the deck touch?\
+        \nA: The first and last cards in the deck touch after {third_question_answer} shuffles."
     )

@@ -99,7 +99,7 @@ class Shuffle:
         return self
 
     def until(self, condition: str):
-        is_str("condtion", condition)
+        is_str("condition", condition)
 
         if condition == "TOUCHING":
             self.shuffle_until = "TOUCHING"
