@@ -2,7 +2,6 @@ from validators import is_card, is_int
 from .card.card import Card
 
 
-
 class Position:
     def __init__(self, card, value: int):
         is_card("card", card)

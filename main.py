@@ -38,13 +38,13 @@ if __name__ == "__main__":
     )
 
     print(
-        f"What is the position of the first card after the 7th shuffle?: {first_question_answer}"
+        f"What is the position of the first card after the 7th shuffle?\nA: {first_question_answer}"
     )
 
     print(
-        f"\nHow many times must you perform the shuffle so that the top card becomes the bottom card?: {second_question_answer}"
+        f"\nHow many times must you perform the shuffle so that the top card becomes the bottom card?\nA: {second_question_answer}"
     )
 
     print(
-        f"\nWhen do the first and last cards in the deck touch?: {third_question_answer}"
+        f"\nWhen do the first and last cards in the deck touch?\nA: {third_question_answer}"
     )

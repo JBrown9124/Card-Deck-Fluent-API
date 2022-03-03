@@ -1,4 +1,5 @@
-from validators import is_str
+from validators import is_str, is_card
+from typing import Union
 from .card.card import Card
 from .shuffle import Shuffle
 
@@ -32,11 +33,12 @@ class Deck:
     def __getitem__(self, idx: int) -> Card:
         return self.cards[idx]
 
-    def __contains__(self, card: Card) -> Card:
-        if type(card) != Card:
-            raise TypeError("card must be of type Card")
+    def __contains__(self, element: Card) -> Union[Card, None]:
+        is_card("element", element)
 
-        return card in self.cards
+        return element in self.cards
 
-    def __setitem__(self, idx: int, card: Card):
-        self.cards[idx] = card
+    def __setitem__(self, idx: int, value: Card) -> None:
+        is_card("set value", value)
+
+        self.cards[idx] = value

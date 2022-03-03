@@ -69,6 +69,7 @@ class Shuffle:
         is_int("amount", amount)
 
         self.amount = amount
+        
         return self
 
     def tracking_card(self, idx: int):
@@ -81,6 +82,7 @@ class Shuffle:
             return print("can only track up to 2 positions")
 
         self.tracked_cards.append(self.deck[idx - 1])
+        
         return self
 
     def tracking_cards(self, idx1: int, idx2: int):
@@ -118,4 +120,6 @@ class Shuffle:
         if self.type == "in":
             return self.in_shuffle()
         else:
-            raise ValueError("Invalid type of shuffle provided. Types of shuffle available are 'in'")
+            raise ValueError(
+                "Invalid type of shuffle provided. Types of shuffle available are 'in'"
+            )
